@@ -7,7 +7,51 @@
 </head>
 <body>
     <script>
+        //NUMBER
+        //=> number merupakan function yang digunakan untuk melakukan onversi ke tipe data number
+        //=> jika data tidak bisa dikonversi ke number, secara otomatis hasilnya adalah NaN
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number 
+        const input = "12345"
+        const number = Number(input)
 
+        console.info(typeof input) //string
+        console.info(typeof number) //number
+        console.info(number) //12345
+        console.info(Number("abc")) //NaN
+        console.info(Number.MAX_SAFE_INTEGER)
+        console.info(Number.EPSILON)
+        console.info(Number.isNaN(1))
+        console.info(Number.isNaN(NaN))
+
+        //NUMBER STATIC PROPERTIES
+        //=> Number memiliki banyak static properties, seperti :
+        //=> Number.MIN_VALUE untuk mendapat number minimal
+        //=> Number.MAX_VALUE untuk mendapat number maksimal
+        //=> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#static_properties
+
+        console.info(Number.MAX_VALUE)
+        console.info(Number.MIN_VALUE)
+
+        //NUMBER STATIC METHOD
+        //=> Number memiliki banyak static method, seperti :
+        //=> Number.isInteger(value) untuk mengecek apakah number merupakan integer
+        //=> Number.isNaN(value) untuk mengecek apakah number merupakan NaN
+
+        const data = Number("12345")
+        console.info(Number.isInteger(data))
+        console.info(Number.isNaN(data))
+
+        //NUMBER INSTANCE METHOD
+        //=> number memiliki banyak instance method, seperti :
+        //=> Number.toLocalString(locale) untuk mengubah number menjadi string sesuai locale : 
+        // https://www.lansweeper.com/knowledgebase/list-of-currency-culture-codes/ 
+        //=> Number.toString(radix) untuk mengubah number menjadi string sesuai radix
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#instance_methods 
+
+
+        const value = Number("12345")
+        console.info(Number.toString(2)) //binary
+        console.info(Number.toLocaleString("id-ID"))
     </script>
 </body>
 </html>

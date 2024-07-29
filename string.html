@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <script>
+        //STRING
+        //=> string merupakan function yang digunakan untuk melakukan onversi ke tipe data string
+        //=> Tipe data String sudah kita bahas pada materi JavaScript Dasar
+        //=> Namun kita belum membahas instance method atau juga instance properties yang terdapat di String
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+        
+        const name = "Andika Auli Ahbab Mahasin"
+
+        //STRING INSTANCE METHOD DAN PROPERTIES
+        //=> string memiliki beberapa instance method, seperti :
+        //=> length untuk mendapat panjang string
+        //=> toUpperCase() dan toLowerCase() untuk mengubah string menjadi huruf kapital dan huruf kecil
+        //=> charAt() untuk mendapat karakter pada index tertentu
+        //=> indexOf() dan lastIndexOf() untuk mendapat index dari karakter tertentu
+        //=> substring() untuk mendapat substring sesuai index
+        //=> split() untuk memecah string menjadi array sesuai delimiter
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#instance_methods 
+
+        console.info(name.length);
+        console.info(name.toUpperCase());
+        console.info(name.toLowerCase());
+        console.info(name.charAt(3));
+        console.info(name.indexOf("A"));
+        console.info(name.lastIndexOf("A"));
+        console.info(name.substring(3, 7));
+        console.info(name.split(" "));
+
+        const input = "     input data     "
+        console.info(input.trim());
+        console.info(input.trimLeft());
+        console.info(input.trimRight());
+    </script>
+</body>
+</html>

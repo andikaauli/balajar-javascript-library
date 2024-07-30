@@ -7,6 +7,12 @@
 </head>
 <body>
     <script>
+        //RegExp
+        //=> RegExp merupakan implementasi dari regular expression di JavaScript
+        //=> Regular expression merupakan fitur untuk mencari text dengan pola
+        //=> Membuat regular expression di JavaScript bisa dilakukan dengan dua cara, 
+        //yaitu menggunakan literal notation atau membuat object RegExp
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
         {
             //create regex
 
@@ -18,6 +24,15 @@
         }
 
         {
+            //RegExp Instance Method
+            //Instance Method                       Keterangan
+            //exec(value):result                    eksesusi regex, jika menemukan data
+            //                                      sesuai pola, maka kembalikan resultnya, 
+            //                                      jika tidak maka null
+            //test(value):boolean                   eksensi regex, jika menemukan data 
+            //                                      sesuai pola, maka return true,
+            //                                      jika tidak return false
+
             const name = "Andika Auli Ahbab Mahasin Andika";
             const regex = /Andika/ig;
 
@@ -32,6 +47,10 @@
 
         {
             //regex modifier
+            //Modifier                Keterangan
+            //g                       global
+            //i                       case insensitive
+            //m                       multiline, pencarian dilakukan tiap baris (enter)
 
             const name ="andika Auli \n Joko Budiarno \n Andika Budiarno \n Joko Auli";
             const regex1 = new RegExp(/Andika/g);
@@ -61,6 +80,14 @@
         }
 
         {
+            //Regular Expression di String
+            //String Method                        Keterangan
+            //match(regex):array                   mencari semua ekspresi regular
+            //search(regex):number                 mencari ekspresi regular
+            //replace(regex, string):string        mengganti ekspresi regular
+            //replaceAll(regex, string):string     mengganti semua ekspresi regular
+            //split(regex):array                   memecah ekspresi regular
+
             const name = "eko eki eka eku eke edo eko eki"
 
             console.info(name.match(/ek[aiueo]/ig))
@@ -69,6 +96,17 @@
             console.info(name.replaceAll(/ek[aiueo]/ig, "kamu"))
             console.info(name.split(/e/ig))
         }
+
+        //fitur RegExp Lainnya
+        //=> Assersions : indikasi awal dan akhir teks 
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions 
+        //=> Character Classes : membedakan antara huruf dan angka 
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes
+        //=> Group dan Range : melakukan grouping atau range huruf atau angka
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Grouping_and_Ranges
+        //=> Quantifiers : menentukan jumlah huruf atau angka 
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers
+        
     </script>
 </body>
 </html>

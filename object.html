@@ -7,8 +7,18 @@
 </head>
 <body>
     <script>
+        //OBJECT
+        //=> Tipe data object sudah sering sekali kita bahas di JavaScript Dasar dan JavaScript OOP
+        //=> Pada materi ini, kita akan bahas banyak static method yang terdapat pada Object
+        //=> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object 
+
         {
             // object freeze dan seal
+            //=> Secara default, object bisa diubah atau dihapus properties nya
+            //=> Jika kita ingin mengubah sebuah object menjadi object yang tidak bisa diubah atau dihapus, kita bisa menggunakan beberapa static method
+            //=> Object.freeze() digunakan untuk mengubah object menjadi object yang tidak bisa diubah atau dihapus attribute nya
+            //=> Object.seal() digunakan untuk mengubah object menjadi object yang tidak bisa dihapus attribute nya
+
             const person = {
                 firstName: "Andika",
                 lastName: "Auli"
@@ -22,7 +32,12 @@
             delete person.lastName;
             console.info(person);
         }
+
         {
+            // object assign
+            //=> Kadang kita ada kasus menggabungkan semua attribute dari sebuah object ke object lain
+            //=> Hal ini bisa kita lakukan dengan menggunakan Object.assign(target, source)
+
             const target = {
                 firstName: "Andika",
                 middleName: "Agus"
@@ -39,6 +54,11 @@
         }
 
         {
+            // Object Property Name & Value
+            //=> Object juga memiliki static method untuk digunakan mengambil semua properties names dan values
+            //=> Object.values() digunakan untuk mengambil semua property value
+            //=> Object.getPropertyNames() digunakan untuk mengambil semua properti name
+
             const person = {
                 firstName: "Andika",
                 lastName: "Auli"
@@ -47,6 +67,10 @@
             console.info(Object.value(person));
             console.info(Object.getOwnPropertyNames(person));
         }
+
+        // Function lain
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object 
+
     </script>
 </body>
 </html>

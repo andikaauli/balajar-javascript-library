@@ -7,6 +7,23 @@
 </head>
 <body>
     <script>
+        //Encode
+        //=> Saat kita menulis URL, kadang kita ingin menambahkan informasi
+        //tambahan seperti query parameter misalnya
+        //=> URL sendiri sudah memiliki standard encoding penulisan URL
+        //=> Standard encoding ini dilakukan agar penulisan URL aman ketika diterima oleh server
+        //=> Aman disini dalam artian informasi URL tidak berubah
+        //=> Contoh paling sederhana, misal, walaupun kita bisa mengirim spasi dalam url, tapi 
+        //disarankan untuk di encode agar nilai spasi tidak benar-benar terlihat seperti spasi pada URL nya
+
+        //Contoh masalah jika tidak menggunakan Encode
+        //=> Misal ada query parameter dengan nama data, lalu kita ingin mengirimkan nilai kesana
+        //=> Misal nilainya adalah &eko=eko&, alhasil URL nya akan seperti berikut
+        //=> http://contoh.com/?eko=eko&
+        //=> Ini akan terlihat begitu saja, tapi jika kita ingin mengirimkan spasi,
+        //kita harus menggunakan encode
+        //=> Artinya tanda seperti & dan lain-lain perlu di encode,
+        //agar tidak terjadi kesalahan data yang kita kirim
 
         {
             //encode uri & decode uri
@@ -24,7 +41,7 @@
         {
 
             //encode uri component & decode uri component
-            
+
             const value = "Andika&Auli=AHbab:Mahasin"
             const url = "http://contoh.com/?name="
             console.info(url + value);

@@ -7,6 +7,10 @@
 </head>
 <body>
     <script>
+        // date
+        //=> JavaScript memiliki tipe data untuk representasi waktu dan tanggal, yaitu Date
+        //=> Date merupakan representasi milisecond sejak tanggal 1 Januari 1970, atau dikenal dengan Epoch & Unix Timestamp
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date 
         {
             //create date
 
@@ -27,6 +31,11 @@
 
         {
             // epoch & unix timestamp
+            //=> Dalam menggunakan tipe data waktu, biasanya disemua bahasa pemrograman akan mendukung yang namanya epoch & unix timestamp
+            //=> Epoch & Unix timestamp merupakan hitungan miliseconds setelah tanggal  1 Januari 1970
+            //=> JavaScript pun mendukung pembuatan waktu dalam bentuk epoch dan unix timestamp
+            //=> Untuk mendapatkan waktu saat ini dalam epoch & unix timestamp, kita bisa menggunakan Date.now()
+            //=> Untuk mengubah dari object date ke epoch & unix timestamp, kita bisa menggunakan function getTime()
 
             const date1 = new Date()
             console.info(date1.getTime());
@@ -44,6 +53,14 @@
         }
     
         {
+            //parsing date
+            //=> Kita juga bisa melakukan parsing membuat date dari string menggunakan method Date.parse(value)
+            //=> Format string harus YYYY-MM-DDTHH:mm:ss.sssZ
+            //=> Dimana jika kita hanya membuat date berisi tanggal saya, kita cukup gunakan YYYY-MM-DD
+            //=> Jika date dengan tanggal dan waktu, gunakan YYYY-MM-DDTHH:mm:ss.sss
+            //=> Jika date dengan tanggal, waktu dan timezone, gunakan YYYY-MM-DDTHH:mm:ss.sssZ
+            //=> Hasil parsing adalah unix timestamp, bukan object date
+
             const parseTimeStamp = Date.parse("2020-10-10T16:15:09.123+07:00")
             console.info(parseTimeStamp)
 
@@ -52,6 +69,10 @@
         }
 
         {
+            //date getter dan setter
+            //=> Date juga memiliki banyak sekali method untuk mendapatkan informasi date dan juga mengubah informasi date, atau istilahnya adalah getter dan setter
+            //=> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods 
+            
             const date = new Date()
 
             date.setDate(10)
